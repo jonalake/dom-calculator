@@ -14,6 +14,20 @@ inputs.forEach(input => {
     })
 })
 
+equals.addEventListener("click", event => {
+    let screenText = screen.textContent.slice(0, screen.textContent.length - 1);
+    try {
+        eval(screenText)
+    } catch (error) {
+        screen.textContent = `ERROR`;
+    }
+    if (eval(screenText) === Infinity) {
+        screen.textContent = `ERROR`;
+    } else {
+        screen.textContent = `${eval(screenText)}`;
+    }
+})
+
 clear.addEventListener("click", event => {
     screen.textContent = ``;
 })
