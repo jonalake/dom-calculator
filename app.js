@@ -1,5 +1,6 @@
 const screen = document.querySelector("#screen")
 const inputs = document.querySelectorAll("span")
+const clear = document.querySelector("#clear")
 
 inputs.forEach(input => {
     input.addEventListener("click", event => {
@@ -11,4 +12,8 @@ inputs.forEach(input => {
             screen.textContent += `${input.textContent}`
         }
     })
+})
+
+clear.addEventListener("click", event => {
+    screen.textContent = ``;
 })
