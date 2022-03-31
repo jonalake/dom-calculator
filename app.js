@@ -21,7 +21,7 @@ equals.addEventListener("click", event => {
     } catch (error) {
         screen.textContent = `ERROR`;
     }
-    if (eval(screenText) === Infinity) {
+    if (eval(screenText) === Infinity || isNaN(eval(screenText))) {
         screen.textContent = `ERROR`;
     } else {
         screen.textContent = `${eval(screenText)}`;
